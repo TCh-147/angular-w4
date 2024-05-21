@@ -1,0 +1,72 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-btn-dis{
+    display: none;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: rgb(225, 225, 225);
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 4px;
+    cursor: no-drop;
+}
+
+#top-btn{
+    margin: 0;
+    padding: 0.5rem;
+    background-color: rgb(225, 225, 225);
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 4px;
+}
+
+#top-btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 248, 187);
+    border: 2px solid rgb(201, 195, 146);
+}
+
+.traffic-light{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background-color: rgb(76, 74, 87);
+}
+
+#top-red{
+    background-color: rgb(255, 215, 215);
+    border: 3px solid red;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+}
+
+#top-yellow{
+    background-color: rgb(255, 255, 213);
+    border: 3px solid yellow;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+}
+
+#top-green{
+    background-color: rgb(218, 255, 218);
+    border: 3px solid green;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
+}
+
+cd-timer{
+    display: none;
+}

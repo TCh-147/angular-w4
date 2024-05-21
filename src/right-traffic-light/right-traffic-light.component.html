@@ -1,0 +1,29 @@
+<div class="wrapper">
+
+    @if(accident){
+        <cd-timer [startTime]="1" [endTime]="10" (onStart)="turnYellow()" (onComplete)="changeAccident()" (onStop)="redGo()" (onTick)="flashYellow()"></cd-timer>
+    }
+
+    @if(yellowGreenTimer){
+        <cd-timer [startTime]="1" [endTime]="2" (onComplete)="turnGreen()" (onStop)="greenGo()" (onTick)="lookForAccident()"></cd-timer>
+    }
+    @if(greenTimer){
+        <cd-timer [startTime]="1" [endTime]="5" (onComplete)="turnYellow()" (onStop)="greenYellowGo()" (onTick)="lookForAccident()"></cd-timer>
+    }
+    @if(yellowRedTimer && !accident){
+        <cd-timer [startTime]="1" [endTime]="2" (onStart)="turnYellow()" (onComplete)="turnRed()" (onStop)="redGo()" (onTick)="lookForAccident()"></cd-timer>
+    }
+    @if(redTimer){
+        <cd-timer [startTime]="1" [endTime]="5" (onComplete)="turnYellow()" (onStop)="redYellowGo()" (onTick)="lookForAccident()"></cd-timer>
+    }
+    
+    <div class="traffic-light">
+        <div id="right-red"></div>
+        <div id="right-yellow"></div>
+        <div id="right-green"></div>
+    </div>
+    
+    <button id="right-btn" (click)="cross()">Пресичане</button>
+    <button disabled id="right-btn-dis">Пресичане</button>
+
+</div>
